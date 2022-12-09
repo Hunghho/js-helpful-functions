@@ -7,7 +7,45 @@ function isOdd(number){
         return "Even";
     }
 }
+// This function generates a random number that is both positive and even
+function randomPositiveEvenNumber() {
+    var randomNumber = Math.ceil(Math.random() * 100) + 10;
+    if(randomNumber % 2 !== 0) {
+        return randomPositiveEvenNumber()
+    }
 
+    return randomNumber;
+}
+
+// this function generates a random number that is both positive and odd
+function randomPositiveOddNumber() {
+    var randomNumber = Math.ceil(Math.random() * 100) + 10;
+    if(randomNumber % 2 === 0) {
+        return randomPositiveOddNumber();
+    }
+
+    return randomNumber;
+}
+
+// this function generates a random number that is both negative and even.
+function randomNegativeEvenNumber() {
+    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    if(randomNumber % 2 === 0) {
+        return randomNumber;
+    }
+
+    return randomNegativeEvenNumber();
+}
+
+// this function generates a random number that is both negative and odd.
+function randomNegativeOddNumber() {
+    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    if(randomNumber % 2 === 0) {
+        return randomNegativeOddNumber();
+    }
+
+    return randomNumber;
+}
 function isNumeric(input) { /// this function turn a numeric strick into a number value
     return !isNaN(parseFloat(input));
 }
@@ -107,3 +145,5 @@ function isConsonant(letter){
         return "is not a consonant";
     }
 }
+
+// .toLocaleString('en-US', {style:'currency', currency: 'USD'}) to perform US currency
