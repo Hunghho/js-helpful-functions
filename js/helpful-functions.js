@@ -1,5 +1,10 @@
 "use strict"
 
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
 function isOdd(number){
     if (number % 2 !== 0) {
         return "Odd";}
