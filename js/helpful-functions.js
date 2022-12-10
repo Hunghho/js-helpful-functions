@@ -1,5 +1,13 @@
 "use strict"
 
+function showMultiplicationTable(num){
+    for (let i = 1; i < 11; i++){
+        let answer = `${num} x ${i} = ${num * i}`;
+        console.log(answer);
+    }
+}
+
+
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
