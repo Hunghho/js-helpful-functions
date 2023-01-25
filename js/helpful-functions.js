@@ -59,7 +59,7 @@ function randomNegativeOddNumber() {
 
     return randomNumber;
 }
-function isNumeric(input) { /// this function turn a numeric strick into a number value
+function isNumeric(input) { /// this function turn a numeric string into a number value
     return !isNaN(parseFloat(input));
 }
 
@@ -160,3 +160,49 @@ function isConsonant(letter){
 }
 
 // .toLocaleString('en-US', {style:'currency', currency: 'USD'}) to perform US currency
+
+// finding average of the array object
+function findAverageDogAge(input){
+    let age = 0;
+    let dogCount = 0;
+    for (let i = 1; i < pets.length; i += 1){
+        if(pets[i].type == "Dog"){
+            age += pets[i].age;
+            dogCount += 1;
+        }
+        console.log(`${age} total of dogs age`);
+        console.log(`${dogCount} number of dog counted`);
+    }
+    if (dogCount == 0) {
+        return 0;
+    }
+    let avg = age / dogCount;
+    console.log(avg);
+}
+
+const pets = [
+    {
+        name: 'Sparky',
+        type: 'Fish',
+        age: 4
+    },
+    {
+        name: 'Mr. Pig',
+        type: 'Cat',
+        age: 4
+    },
+    {
+        name: 'Bubba',
+        type: 'Dog',
+        age: 5
+    },
+    {
+        name: 'Pickles',
+        type: 'Dog',
+        age: 10
+    }
+
+];
+//
+findAverageDogAge(pets) // returns 7.5
+// end of function example
